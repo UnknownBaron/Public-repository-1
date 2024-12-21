@@ -36,6 +36,8 @@ int main(void)
             names = tmp;
 
             names[counter - 1].word = malloc(sizeof(char) * strlen(delta));
+            if (names[counter - 1].word == NULL)
+                return -1;
             strcpy(names[counter - 1].word, delta);
             names[counter - 1].reps = 1;
         }
